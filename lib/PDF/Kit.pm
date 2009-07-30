@@ -81,7 +81,7 @@ use lib glob( '~/lib' ), $RealBin;
 # --------------------------------------
 # Configuration Parameters
 
-use constant SPACE => "\x20";
+my $SPACE = "\x20";
 
 # Make Data::Dumper pretty
 $Data::Dumper::Sortkeys = 1;
@@ -286,9 +286,9 @@ sub flatten {
         unless( @$list && ! ref( $list->[-1] ) ){
           push @$list, '';
         }
-        $list->[-1] .= SPACE if $opts{-space_before};
+        $list->[-1] .= $SPACE if $opts{-space_before};
         $list->[-1] .= $item;
-        $list->[-1] .= SPACE if $opts{-space_after};
+        $list->[-1] .= $SPACE if $opts{-space_after};
       }
     }
   }
@@ -396,15 +396,15 @@ MUT_LOOP:
     }
 
     if( $space_pending ){
-      $trailing_spaces = SPACE;
+      $trailing_spaces = $SPACE;
       $trailing_width = $space_width;
       if( $two_spaces ){
-        $trailing_spaces .= SPACE;
+        $trailing_spaces .= $SPACE;
         $trailing_width .= $space_width;
       }
     }
 
-    $space_width = &{$opts{-compute_length}}( { %opts, -print=>0, }, SPACE ); # must redo every time since might have changed from previous
+    $space_width = &{$opts{-compute_length}}( { %opts, -print=>0, }, $SPACE ); # must redo every time since might have changed from previous
 
     # process the text
     my @text = split m{ ( \s+ ) }msx, $text;
@@ -479,11 +479,11 @@ MUT_LOOP:
       }elsif( $space_pending ){
         $lines->[-1]{-length} += $space_width;
         $lines->[-1]{-segments}[-1]{-length} += $space_width;
-        $lines->[-1]{-segments}[-1]{-text}   .= SPACE;
+        $lines->[-1]{-segments}[-1]{-text}   .= $SPACE;
         if( $two_spaces ){
           $lines->[-1]{-length} += $space_width;
           $lines->[-1]{-segments}[-1]{-length} += $space_width;
-          $lines->[-1]{-segments}[-1]{-text}   .= SPACE;
+          $lines->[-1]{-segments}[-1]{-text}   .= $SPACE;
         }
       }
 
@@ -1656,9 +1656,5 @@ along with this document; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 =head1 ACKNOWLEDGEMENTS
-
-=head1 HISTORY
-
-  $Log$
 
 =cut

@@ -40,7 +40,7 @@ use utf8;  # Convert all UTF-8 to Perl's internal representation.
 
 # --------------------------------------
 # Version
-use version; our $VERSION = qv(1.0.0);
+use version; our $VERSION = qv(v1.0.0);
 
 # --------------------------------------
 # Exports
@@ -743,7 +743,7 @@ PDF::Kit - A collection of subroutines for PDF::API2.
 
 =head1 VERSION
 
-This document refers to PDF::Kit version 1.0.0
+This document refers to PDF::Kit version v1.0.0
 
 =head1 SYNOPSIS
 

@@ -3,7 +3,7 @@ Changes
 MANIFEST
 README
 lib/PDF/Kit.pm
-script/pdf_kit_eg.pl
+script/pdf_kit_eg
 t/00-load.t
 t/pod-coverage.t
 t/pod.t

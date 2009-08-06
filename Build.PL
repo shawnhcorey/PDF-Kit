@@ -4,7 +4,7 @@ use Module::Build;
 
 my $builder = Module::Build->new(
     module_name         => 'PDF::Kit',
-    license             => 'GPLv3',
+    license             => 'gpl',
     dist_author         => 'Shawn H Corey <SHCOREY@cpan.org>',
     dist_version_from   => 'lib/PDF/Kit.pm',
     build_requires => {

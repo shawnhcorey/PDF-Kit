@@ -44,15 +44,11 @@ use Carp;
 use Data::Dumper;
 use English qw( -no_match_vars ) ;  # Avoids regex performance penalty
 use File::Basename;
-use FindBin '$RealBin'; FindBin->again();
 use Getopt::Long;
 use Pod::Usage;
 use POSIX;
 
 use PDF::API2;
-
-use lib glob( '~/lib' ), $RealBin;
-
 use PDF::Kit;
 
 # --------------------------------------

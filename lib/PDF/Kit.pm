@@ -36,7 +36,7 @@ use warnings;
 
 # --------------------------------------
 # Version
-use version; our $VERSION = qv(v1.0.3);
+use version; our $VERSION = qv(v1.0.4);
 
 # --------------------------------------
 # Exports
@@ -69,10 +69,7 @@ use Carp;
 use Data::Dumper;
 use English qw( -no_match_vars ) ;  # Avoids regex performance penalty
 use File::Basename;
-use FindBin '$RealBin'; FindBin->again();
 use POSIX;
-
-use lib glob( '~/lib' ), $RealBin;
 
 # --------------------------------------
 # Configuration Parameters
@@ -739,7 +736,7 @@ PDF::Kit - A collection of subroutines for PDF::API2.
 
 =head1 VERSION
 
-This document refers to PDF::Kit version v1.0.3
+This document refers to PDF::Kit version v1.0.4
 
 =head1 SYNOPSIS
 

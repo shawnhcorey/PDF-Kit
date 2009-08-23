@@ -13,7 +13,7 @@ my $builder = Module::Build->new(
     add_to_cleanup      => [ 'PDF-Kit-*' ],
     create_makefile_pl => 'traditional',
     script_files => {
-      'script/pdf_kit_eg' => 1,
+      'script/pdf_kit_eg.pl' => 1,
     },
 );
 

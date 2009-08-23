@@ -290,7 +290,7 @@ my $Paragraph = [
   $Phrase,
 ];
 print_paragraph( \%P_opts, $Paragraph );
-$Pdf->saveas( "$0.pdf" );
+$Pdf->saveas( basename( $0 ) . 'pdf' );
 
 __DATA__
 __END__

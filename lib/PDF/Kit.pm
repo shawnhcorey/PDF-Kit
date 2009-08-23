@@ -36,7 +36,7 @@ use warnings;
 
 # --------------------------------------
 # Version
-use version; our $VERSION = qv(v1.0.4);
+use version; our $VERSION = qv(v1.0.5);
 
 # --------------------------------------
 # Exports
@@ -736,7 +736,7 @@ PDF::Kit - A collection of subroutines for PDF::API2.
 
 =head1 VERSION
 
-This document refers to PDF::Kit version v1.0.4
+This document refers to PDF::Kit version v1.0.5
 
 =head1 SYNOPSIS
 
